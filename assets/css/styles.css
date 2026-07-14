@@ -14,6 +14,20 @@ body {
 a {
     text-decoration: none;
 }
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 173px;
+    height: 57px;
+    background-color: var(--primary-color);
+    border-radius: 40px;
+    font-family: "Public Sans";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #fff;
+}
 .btn:hover {
     opacity: 0.9;
 }
@@ -27,6 +41,20 @@ a {
 .header {
     padding-top: 13px;
     padding-bottom: 13px;
+    position: relative;
+}
+.header::after {
+    content: "";
+    position: absolute;
+    width: 1140px;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        #fff 0%,
+        #dddcdc 51.09%,
+        rgba(212, 212, 212, 0) 99.68%
+    );
+    bottom: 0;
 }
 .header__inner {
     display: flex;
@@ -42,20 +70,6 @@ a {
 }
 .header__action {
     margin-left: 88px;
-}
-.header__sign-up {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 173px;
-    height: 57px;
-    background-color: var(--primary-color);
-    border-radius: 40px;
-    font-family: "Public Sans";
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 28px;
-    color: #fff;
 }
 .header__menu-link {
     color: #575d5e;
@@ -75,5 +89,107 @@ a {
     background-color: var(--primary-color);
     display: block;
     position: absolute;
-    bottom: -26px;
+    bottom: -31px;
+    z-index: 2;
+}
+/* ------------------HERO------------------ */
+.hero {
+    padding-top: 60px;
+}
+.hero__inner {
+    display: flex;
+    align-items: center;
+}
+.hero__content {
+    flex-shrink: 0;
+}
+.hero__media {
+    margin-left: 76px;
+    position: relative;
+}
+.hero__media::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 340px;
+    height: 340px;
+    border-radius: 340px;
+    background: #a4dccb;
+    filter: blur(137px);
+    /* Dùng để một vùng sáng màu xanh bị blur phía sau các ảnh  */
+}
+.hero__title {
+    color: var(--primary-color);
+    font-family: "Public Sans";
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 60px;
+    width: 368px;
+}
+.hero__desc {
+    color: var(--primary-color);
+    font-family: "Public Sans";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    width: 341px;
+    margin-top: 20px;
+}
+.hero__actions {
+    display: flex;
+    margin-top: 42px;
+    align-items: center;
+    gap: 0 36px;
+}
+.hero__watch {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.hero__icon {
+    position: absolute;
+    left: 7px;
+}
+.hero__text {
+    color: #152427;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+}
+.hero__image {
+    width: 202px;
+    height: 466px;
+    border-radius: 110px;
+    object-fit: cover;
+    display: inline-block;
+}
+.hero__image + .hero__image {
+    margin-left: 20px;
+}
+.hero__image--2 {
+    position: relative;
+    top: 77px;
+}
+.hero__vector {
+    position: absolute;
+}
+.hero__vector--1 {
+    top: -32.39px;
+    left: -211px;
+}
+.hero__vector--2 {
+    top: -33px;
+    left: -164px;
+}
+.hero__vector--3 {
+    bottom: -133px;
+    right: 42px;
+}
+.hero__vector--4 {
+    right: 0;
+    bottom: -108px;
 }
